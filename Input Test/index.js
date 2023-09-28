@@ -2,15 +2,30 @@ const input = document.getElementById('autocomplete');
 const optionsList = document.getElementById('autocomplete-options');
 const options = optionsList.getElementsByTagName('li');
 
-input.addEventListener('focus', () => {
-  optionsList.style.display = 'block';
-});
+
+
+//focus response to clicking on the input, then performs function, here is creates a block item in display
+
+ input.addEventListener('focus', () => {
+   optionsList.style.display = 'block';
+ });
+
+
+
+
+
+
+//blur reverse the focus response, when user clicks away from item
+
 
 input.addEventListener('blur', () => {
   setTimeout(() => {
     optionsList.style.display = 'none';
   }, 200); // Delay the hide to allow clicking on options
 });
+
+
+//function is triggered when something is typed in the input field
 
 input.addEventListener('input', () => {
   const inputValue = input.value.toLowerCase();
@@ -25,6 +40,10 @@ input.addEventListener('input', () => {
     }
   }
 });
+
+
+
+
 
 let selectedIndex = -1;
 
@@ -72,3 +91,18 @@ input.addEventListener('keydown', (e) => {
 });
 
 
+
+
+
+
+
+// jsonData.data["results"].forEach((result) => {
+//   let name = result.name;
+//   let div = document.createElement("div");
+//   div.style.cursor = "pointer"
+//   div.classList.add("autocomplete-items");
+//   div.setAttribute("onclick", "displayWords('" + name + "')");
+//   let word = "<b>" + name.substr(0, input.value.length) + "</b>";
+//   word += name.substr(input.value.length);
+//   div.innerHTML = `<p class="item">${word}</p>`;
+//   listContainer.appendChild(div);
