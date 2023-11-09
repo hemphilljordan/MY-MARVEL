@@ -40,6 +40,7 @@ input{
   border: none;
   border-radius: 0.5em;
   outline: none;
+  width: 100%;
 }
 button {
   outline: none; 
@@ -60,7 +61,7 @@ button {
   width: 9.37em;
   display: block;
   margin:auto;
-  border-radius: 50%
+  border-radius: 50%;
 }
 .container-character-image img {
   width: 100%;
@@ -131,4 +132,15 @@ button {
 .auto-keydown1 {
   background-color: #ddd;
   color: #171821;
+}
+
+@media (max-width: 768px) {
+  .container-character-image {
+    height: 6em;
+    width: 6em;
+    text-align: center;
+  }
+  .character-name {
+    text-align: center;
+  }
 }
